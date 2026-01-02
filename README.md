@@ -102,9 +102,9 @@ App (CLI)
 
 The Expense Tracker application uses a **relational database** with three core tables:
 
-* `user`
-* `category`
-* `expense`
+* user
+* category
+* expense
 
 The schema is designed to:
 
@@ -116,7 +116,7 @@ The schema is designed to:
 
 ---
 
-## 🧑‍💻 `user` Table
+## 🧑‍💻 User Table
 
 ### Purpose
 
@@ -134,7 +134,7 @@ Stores user account details. Each user owns categories and expenses.
 
 ### Constraints
 
-* **UNIQUE (`User_name`)**
+* **UNIQUE (User_name)**
 
 ### Notes
 
@@ -144,7 +144,7 @@ Stores user account details. Each user owns categories and expenses.
 
 ---
 
-## 🗂️ `category` Table
+## 🗂️ category Table
 
 ### Purpose
 
@@ -176,7 +176,7 @@ Stores expense categories. Categories are **user-specific**.
 
 ---
 
-## 💸 `expense` Table
+## 💸 expense Table
 
 ### Purpose
 
