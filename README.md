@@ -10,10 +10,14 @@ manual transaction handling, and proper ORM usage without relying on Spring Boot
 
 <pre>
 App (CLI)
- └── Service Layer
-      └── Repository (DAO) Layer
-           └── Hibernate ORM
-                └── MySQL Database
+ |
+Service Layer
+ |
+Repository (DAO) Layer
+ |
+Hibernate ORM
+ |
+MySQL Database
 </pre>
 
 <h2>Features</h2>
