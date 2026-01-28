@@ -6,7 +6,7 @@ A console-based Expense Tracker application built using <b>Core Java</b> and
 manual transaction handling, and proper ORM usage without relying on Spring Boot.
 </p>
 
-<h2>📐 Architecture</h2>
+<h2>1) Architecture</h2>
 
 <pre>
 App (CLI)
@@ -16,8 +16,8 @@ App (CLI)
                 └── MySQL Database
 </pre>
 
-<h2>✨ Features</h2>
-<h2>🔐 User Management</h2>
+<h2>Features</h2>
+<h2>1) User Management</h2>
 <ul>
   <li>User registration with unique username</li>
   <li>Secure login using username &amp; password</li>
@@ -28,7 +28,7 @@ App (CLI)
   <li>User account status management (active, deleted)</li>
 </ul>
 
-<h2>🗂️ Category Management</h2>
+<h2>2) Category Management</h2>
 <ul>
   <li>View general categories</li>
   <li>Create user-specific categories</li>
@@ -43,7 +43,7 @@ App (CLI)
   <li>Automatic cleanup of categories when user is deleted (CASCADE)</li>
 </ul>
 
-<h2>💸 Expense Management</h2>
+<h2>3) Expense Management</h2>
 <ul>
   <li>Add a single expense</li>
   <li>Add multiple expenses in one session</li>
@@ -56,7 +56,7 @@ App (CLI)
   <li>Permanent deletion of expenses</li>
 </ul>
 
-<h2>🧠 Data Integrity &amp; Safety</h2>
+<h2>4) Data Integrity &amp; Safety</h2>
 <ul>
   <li>User-wise data isolation (users can only access their own data)</li>
   <li>Foreign key enforcement using database constraints</li>
@@ -65,7 +65,7 @@ App (CLI)
   <li>Input validation for numeric fields (prevents crashes)</li>
 </ul>
 
-<h2>🗄️ Database-Level Guarantees</h2>
+<h2>5) Database-Level Guarantees</h2>
 <ul>
   <li>Unique username enforced at database level</li>
   <li>Unique (User_Id, Category_Name) enforced at database level</li>
@@ -79,7 +79,7 @@ App (CLI)
   </li>
 </ul>
 
-<h2>🛠️ Technical / Architectural Features</h2>
+<h2>6) Technical / Architectural Features</h2>
 <ul>
   <li>Built using Java 8</li>
   <li>Hibernate ORM for database operations</li>
@@ -96,7 +96,7 @@ App (CLI)
   <li>Ready for migration to Spring Boot + REST APIs</li>
 </ul>
 
-# 📊 Database Schema – Expense Tracker
+# Database Schema – Expense Tracker
 
 ## Overview
 
@@ -116,7 +116,7 @@ The schema is designed to:
 
 ---
 
-## 🧑‍💻 User Table
+## User Table
 
 ### Purpose
 
@@ -144,7 +144,7 @@ Stores user account details. Each user owns categories and expenses.
 
 ---
 
-## 🗂️ category Table
+## category Table
 
 ### Purpose
 
@@ -176,7 +176,7 @@ Stores expense categories. Categories are **user-specific**.
 
 ---
 
-## 💸 expense Table
+## expense Table
 
 ### Purpose
 
@@ -208,7 +208,7 @@ Stores individual expense records created by users.
 
 ---
 
-## 🔗 Relationships Summary
+## Relationships Summary
 
 * **One User → Many Categories**
 * **One User → Many Expenses**
@@ -218,7 +218,7 @@ All relationships are enforced using **foreign keys with CASCADE**, ensuring no 
 
 ---
 
-## 🧠 Design Rationale
+## Design Rationale
 
 * **Username uniqueness** prevents account ambiguity
 * **(User_Id + Category_Name) uniqueness** enforces clean category organization per user
@@ -229,7 +229,7 @@ All relationships are enforced using **foreign keys with CASCADE**, ensuring no 
 
 ---
 
-## 🧩 Recommended DB Constraints (for reference)
+## Recommended DB Constraints (for reference)
 
 ```sql
 ALTER TABLE user
